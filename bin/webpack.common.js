@@ -30,6 +30,12 @@ module.exports = {
         }
       },
       {
+        test: /\.js/,
+        use: [
+          path.resolve(__dirname, '../loader/replaceLoader.js')
+        ]
+      },
+      {
         test: /\.(png|jpe?g|gif)$/,
         use: [
           {
