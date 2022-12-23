@@ -2,6 +2,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyRightWebkitPlugin = require("../plugins/copyright-webpack-plugin")
+const WindiCSSWebpackPlugin = require('windicss-webpack-plugin')
+
 
 module.exports = {
   entry: {
@@ -63,7 +65,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: "./src/index.html"
-    })
+    }),
+    new WindiCSSWebpackPlugin()
   ],
   output: {
     filename: "[name].bundle.js",
