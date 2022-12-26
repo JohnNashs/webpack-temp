@@ -63,10 +63,11 @@ module.exports = {
     new CopyRightWebkitPlugin({
       name: "Rainy"
     }),
+    new WindiCSSWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html"
     }),
-    new WindiCSSWebpackPlugin()
+    
   ],
   output: {
     filename: "[name].bundle.js",
