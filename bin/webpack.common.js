@@ -7,13 +7,18 @@ const WindiCSSWebpackPlugin = require('windicss-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: "./src/index.js"
+    app: "./src/index.ts"
   },
   performance: {
     hints: false
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
@@ -51,6 +56,9 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
   optimization: {
     usedExports: true,
