@@ -1,7 +1,7 @@
 import { cube } from "./js/math.js";
 import img from "./assets/avatar.jpeg";
 import "./less/style.less";
-import _ from "lodash";
+import * as _ from "lodash";
 import 'windi.css'
 
 if (process.env.NODE_ENV !== "production") {
